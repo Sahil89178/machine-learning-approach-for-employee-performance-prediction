@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prediction Result - Employee Productivity Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        nav {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        nav a {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #e64a19;
+        }
+        .result-box {
+            max-width: 600px;
+            margin: 120px auto 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="templates/home.html">Home</a>
+        <a href="templates/about.html">About</a>
+        <a href="templates/predict,html">Predict</a>
+    </nav>
+
+    <div class="result-box">
+        <h2>Prediction Result</h2>
+        <p>{{ prediction_text }}</p>
+    </div>
+    <div class="result-box">
+    <h2>Prediction Result</h2>
+    {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+    {% else %}
+        <p style="color: red;">No prediction result received.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
